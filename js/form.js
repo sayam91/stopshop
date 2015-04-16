@@ -356,9 +356,14 @@ $(document).ready(function(){
 	        			click: $.proxy(function(e){
 	        				var link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...');
 	        				e.preventDefault;
-	        				
+
 	        				FB.ui({
 								method: 'share_open_graph',
+								name: 'name',
+								caption: 'caption',
+								title: 'tutk',
+								desc: 'descazeaze',
+								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg'
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
 									object: link
