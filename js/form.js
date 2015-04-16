@@ -344,8 +344,8 @@ $(document).ready(function(){
 		    $('#Qstage').append(quiz);
 
 		    var resultsArray = data.results.mostly;
-
 		    for (var C = 0; C < resultsArray.length; C++) {
+		    	console.log(C, data.results.mostly, resultsArray.length);
 		    	var caption 	 	  = encodeURIComponent("I'm a "+ resultsArray[C].header +" shopper, what kind of shopper are you ? @stopshop"),
 		        	results      	  = $("<div/>", {class: "results"}),
 		        	resultsTitle 	  = $("<div/>",{class: "resultsTitle", text: resultsArray[C].header}),
