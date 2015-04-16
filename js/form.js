@@ -353,7 +353,7 @@ $(document).ready(function(){
 		        	shareFb		 	  = $('<a/>',{
 	        			class: "shareFb bloc--rotateRight",
 	        			text: "share",
-	        			href: location.protocol + '//' + location.hostname + location.pathname + '?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
+	        			href: 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
 	        			click: function(e){
 	        				e.preventDefault;
 	        				
