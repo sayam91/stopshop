@@ -357,13 +357,18 @@ $(document).ready(function(){
 	        			href: location.protocol + '//' + location.hostname + location.pathname + '?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
 	        			click: function(e) {
 	        				e.preventDefault();
-							FB.ui({
-								method: 'share_open_graph',
-								action_type: 'og.shares',
-								action_properties: JSON.stringify({
-								object: this.href
-							})
-							}, function(response){});
+							// FB.ui({
+							// 	method: 'share_open_graph',
+							// 	action_type: 'og.shares',
+							// 	action_properties: JSON.stringify({
+							// 	object: this.href
+							// })
+							// }, function(response){});
+		        			FB.ui({
+		        				method: 'share',
+		        				href: location.href
+		        			},
+		        			function(response){});
 						}
 					}),
 					shareTwitter = $('<a/>', {
