@@ -1,0 +1,361 @@
+/* line 5, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby21/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 15, ../sass/main.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/main.scss */
+body {
+  position: relative;
+  font-family: 'Arial Black';
+  background: #f8ec2d;
+}
+
+/* line 25, ../sass/main.scss */
+#title {
+  font-size: 18pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* line 31, ../sass/main.scss */
+.questionSet {
+  position: absolute;
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/************************************
+Multiple Choice CSS
+************************************/
+/* line 41, ../sass/main.scss */
+.choices li {
+  position: relative;
+}
+
+/* line 44, ../sass/main.scss */
+.choices li ol {
+  position: relative;
+}
+
+/* line 47, ../sass/main.scss */
+.choices a {
+  text-decoration: none;
+}
+
+/* line 50, ../sass/main.scss */
+.choices a:hover {
+  color: #F00;
+}
+
+/************************************
+results CSS
+************************************/
+/* line 56, ../sass/main.scss */
+.results {
+  position: absolute;
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 63, ../sass/main.scss */
+.resultsBody {
+  margin-top: 60px;
+}
+
+/* line 67, ../sass/main.scss */
+#container {
+  position: relative;
+  overflow: hidden;
+  background-image: none;
+  background-color: #f8ec2d;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 800px;
+  height: 950px;
+  padding: 90px;
+  margin: 0 auto;
+  transition: background-image .5s;
+}
+
+/* line 81, ../sass/main.scss */
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: black;
+  z-index: 100;
+}
+/* line 91, ../sass/main.scss */
+.progressBar__progress {
+  width: 0;
+  height: 100%;
+  background: #ea1d25;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+/* line 101, ../sass/main.scss */
+.heading h1 {
+  font-size: 25px;
+  text-decoration: underline;
+  margin-bottom: 21px;
+}
+
+/* line 109, ../sass/main.scss */
+.question,
+.resultsTitle {
+  font-size: 40px;
+}
+
+/* line 114, ../sass/main.scss */
+.choices {
+  margin-top: 60px;
+}
+
+/* line 118, ../sass/main.scss */
+.choices a,
+.shareFb {
+  display: inline-block;
+  width: 100%;
+  min-height: 55px;
+  padding: 18px 0 18px 25px;
+  border-radius: 7px;
+  background: #f8ec2d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #fbf17e 0%, #f8ec2d 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fbf17e), color-stop(100%, #f8ec2d));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #fbf17e 0%, #f8ec2d 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #fbf17e 0%, #f8ec2d 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #fbf17e 0%, #f8ec2d 100%);
+  /* IE10+ */
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15), inset 0 -2px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-family: 'Arial';
+  color: black;
+}
+/* line 141, ../sass/main.scss */
+.choices a + a,
+.shareFb + a {
+  margin-top: 20px;
+}
+/* line 145, ../sass/main.scss */
+.choices a:hover,
+.shareFb:hover {
+  background: #ea1d25;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f0545a 0%, #ea1d25 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0545a), color-stop(100%, #ea1d25));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f0545a 0%, #ea1d25 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f0545a 0%, #ea1d25 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f0545a 0%, #ea1d25 100%);
+  /* IE10+ */
+  color: white;
+  text-shadow: none;
+}
+
+/* line 157, ../sass/main.scss */
+.shareFb {
+  position: absolute;
+  left: 30px;
+  bottom: -40px;
+  width: 185px;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 20px;
+  line-height: 55px;
+  background: #3b599e;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #5773b7 0%, #3b599e 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5773b7), color-stop(100%, #3b599e));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #5773b7 0%, #3b599e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #5773b7 0%, #3b599e 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #5773b7 0%, #3b599e 100%);
+  /* IE10+ */
+  color: white;
+  text-transform: uppercase;
+}
+/* line 175, ../sass/main.scss */
+.shareFb:hover {
+  background: #5773b7;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #3b599e 0%, #5773b7 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3b599e), color-stop(100%, #5773b7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #3b599e 0%, #5773b7 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #3b599e 0%, #5773b7 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #3b599e 0%, #5773b7 100%);
+  /* IE10+ */
+}
+/* line 184, ../sass/main.scss */
+.shareFb:before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  background-image: url(../img/f.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px 24px;
+  width: 20px;
+  height: 100%;
+}
+
+/* line 197, ../sass/main.scss */
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  height: 141px;
+  padding: 0 90px;
+  z-index: 10;
+}
+/* line 207, ../sass/main.scss */
+.footer__logo {
+  display: inline-block;
+  width: 150px;
+  height: 141px;
+  vertical-align: middle;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+}
+/* line 217, ../sass/main.scss */
+.footer__text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  font-size: 30px;
+  color: white;
+}
+/* line 226, ../sass/main.scss */
+.footer__stripe {
+  position: absolute;
+  height: 60px;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: black;
+}
+
+/* line 241, ../sass/main.scss */
+.bloc {
+  position: relative;
+  width: 500px;
+  padding: 40px;
+  margin-top: 40px;
+  background: #ea1d25;
+  color: white;
+  font-size: 22px;
+  line-height: 1.2;
+}
+/* line 252, ../sass/main.scss */
+.bloc.bloc--count:after {
+  counter-increment: after;
+  content: counter(after);
+  position: absolute;
+  right: -20px;
+  top: 15px;
+  bottom: 15px;
+  z-index: 150;
+  color: #f8ec2d;
+  font-size: 80px;
+}
+
+/* line 266, ../sass/main.scss */
+.bloc--rotateLeft {
+  transform: rotate(-3.5deg);
+}
+
+/* line 270, ../sass/main.scss */
+.bloc--rotateRight {
+  transform: rotate(3.5deg);
+}
