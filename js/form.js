@@ -365,8 +365,15 @@ $(document).ready(function(){
 							// })
 							// }, function(response){});
 		        			FB.ui({
-		        				method: 'share',
-		        				href: location.href
+		        				method: 'feed',
+		        				display: 'popup',
+		        				message: 'test',
+		        				caption: 'caption',
+		        				description: 'description',
+		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
+		        				picture: 'https://damp-shelf-3607.herokuapp.com/img/logo.jpg',
+		        				user_message_prompt: 'share lal'
+
 		        			},
 		        			function(response){});
 						}
