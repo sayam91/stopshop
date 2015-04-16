@@ -356,16 +356,16 @@ $(document).ready(function(){
 	        			href: location.protocol + '//' + location.hostname + location.pathname + '?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
 	        			click: $.proxy(function(e){
 	        				e.preventDefault;
-	        				var caption = encodeURIComponent("I'm a "+ this.header +" shopper, what kind of shopper are you ?"),
-	        					desc 	= encodeURIComponent(this.copy.substring(0,100)+'...');
+	        				var caption = "I'm a "+ this.header +" shopper, what kind of shopper are you ?",
+	        					desc 	= this.copy.substring(0,100)+'...';
 
 	        				FB.ui({
 		        				method: 'feed',
 		        				display: 'popup',
 		        				message: 'test',
 		        				caption: caption,
-		        				description: desc,
-		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(this.header) +'&desc='+ desc,
+		        				description: this.copy.substring(0,100),
+		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(caption) +'&desc='+ encodeURIComponent(desc),
 		        				picture: 'https://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 		        				user_message_prompt: 'share lal'
 		        			},
