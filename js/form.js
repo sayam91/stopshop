@@ -352,7 +352,7 @@ $(document).ready(function(){
 		        	resultsBody 	  = $("<div/>",{class: "resultsBody bloc bloc--rotateLeft"}),
 		        	resultsBodyInnner = $("<div/>",{class: "bloc--rotateRight", text: resultsArray[C].copy}), 
 		        	shareFb		 	  = $('<a/>',{
-	        			class: "fb-share-button shareFb bloc--rotateRight",
+	        			class: "shareFb bloc--rotateRight",
 	        			text: "share",
 	        			href: location.protocol + '//' + location.hostname + location.pathname + '?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
 	        			click: function(e) {
