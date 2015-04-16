@@ -361,7 +361,7 @@ $(document).ready(function(){
 								method: 'share_open_graph',
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
-									object: this.href
+									object: link
 								})
 							}, function(response){});
 	        			}, resultsArray[C])
