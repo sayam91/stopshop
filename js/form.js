@@ -354,7 +354,8 @@ $(document).ready(function(){
 	        			class: "shareFb bloc--rotateRight",
 	        			text: "share",
 	        			click: $.proxy(function(e){
-	        				var link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...');
+	        				var self = this,
+	        					link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...');
 	        				e.preventDefault;
 
 	        				FB.ui({
@@ -366,9 +367,24 @@ $(document).ready(function(){
 								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
-									object: link
+									type: 'quiz',
+									url: 'http://damp-shelf-3607.herokuapp.com/',
+									title: self.header,
+									description: self.copy,
+									image: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg'
 								})
-							}, function(response){});
+							}, function(response){alert(response)});
+
+
+							FB.ui({
+								method: 'share_open_graph',
+								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
+								action_type: 'og.shares',
+								action_properties: JSON.stringify({
+									object : 'https://apps.facebook.com/475565745924741/?title='+encodeURIComponent(self.header)+'&desc='+self.copy.substring(0,100)+'...',
+									// url: 'http://damp-shelf-3607.herokuapp.com/?title=2&desc=3',
+								})
+							}, function(response){alert(response)});
 	        			}, resultsArray[C])
 					}),
 					shareTwitter = $('<a/>', {
