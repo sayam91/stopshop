@@ -363,7 +363,7 @@ $(document).ready(function(){
 								caption: 'caption',
 								title: 'tutk',
 								desc: 'descazeaze',
-								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg'
+								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
 									object: link
