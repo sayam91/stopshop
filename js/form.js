@@ -364,7 +364,7 @@ $(document).ready(function(){
 									object: this.href
 								})
 							}, function(response){});
-	        			}, resultsArray)
+	        			}, resultsArray[C])
 					}),
 					shareTwitter = $('<a/>', {
 						class: 'twitter-share-button',
