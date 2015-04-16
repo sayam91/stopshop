@@ -381,7 +381,7 @@ $(document).ready(function(){
 								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
-									object : 'https://apps.facebook.com/475565745924741/?title='+encodeURIComponent(self.header)+'&desc='+self.copy.substring(0,100)+'...',
+									object : 'https://apps.facebook.com/475565745924741/?title='+encodeURIComponent(self.header)+'&desc='+encodeURIComponent(self.copy.substring(0,100)+'...'),
 									// url: 'http://damp-shelf-3607.herokuapp.com/?title=2&desc=3',
 								})
 							}, function(response){alert(response)});
