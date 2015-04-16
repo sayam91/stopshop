@@ -346,8 +346,7 @@ $(document).ready(function(){
 		    var resultsArray = data.results.mostly;
 		    for (var C = 0; C < resultsArray.length; C++) {
 		    	console.log(C, data.results.mostly, resultsArray.length);
-		    	var caption 	 	  = encodeURIComponent("I'm a "+ resultsArray[C].header +" shopper, what kind of shopper are you ? @stopshop"),
-		        	results      	  = $("<div/>", {class: "results"}),
+		    	var results      	  = $("<div/>", {class: "results"}),
 		        	resultsTitle 	  = $("<div/>",{class: "resultsTitle", text: resultsArray[C].header}),
 		        	resultsBody 	  = $("<div/>",{class: "resultsBody bloc bloc--rotateLeft"}),
 		        	resultsBodyInnner = $("<div/>",{class: "bloc--rotateRight", text: resultsArray[C].copy}), 
@@ -355,62 +354,54 @@ $(document).ready(function(){
 	        			class: "shareFb bloc--rotateRight",
 	        			text: "share",
 	        			href: location.protocol + '//' + location.hostname + location.pathname + '?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
-	        			click: function(e) {
-	        				e.preventDefault();
-							// FB.ui({
-							// 	method: 'share_open_graph',
-							// 	action_type: 'og.shares',
-							// 	action_properties: JSON.stringify({
-							// 	object: this.href
-							// })
-							// }, function(response){});
-		        			FB.ui({
+	        			click: $.proxy(function(e){
+	        				e.preventDefault;
+	        				var caption = encodeURIComponent("I'm a "+ this.header +" shopper, what kind of shopper are you ?"),
+	        					desc 	= encodeURIComponent(this.copy.substring(0,100)+'...');
+
+	        				FB.ui({
 		        				method: 'feed',
 		        				display: 'popup',
 		        				message: 'test',
-		        				caption: 'caption',
-		        				description: 'description',
-		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(resultsArray[C].header) +'&desc='+ encodeURIComponent(resultsArray[C].copy.substring(0,100)+'...'),
+		        				caption: caption,
+		        				description: desc,
+		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(this.header) +'&desc='+ desc,
 		        				picture: 'https://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 		        				user_message_prompt: 'share lal'
-
 		        			},
 		        			function(response){});
-						}
+	        			}, resultsArray[C])
 					}),
 					shareTwitter = $('<a/>', {
 						class: 'twitter-share-button',
 						text: "Tweet",
-						href: "https://twitter.com/intent/tweet?text="+caption
+						href: "https://twitter.com/intent/tweet?text="
 					});
 
 				resultsBody.append(resultsBodyInnner).append(shareFb);
 		        $(results).append(resultsTitle).append(resultsBody);
 		        $('#Qstage').append(results);
-		        
 
 		        self.RArray.push(results);
 		    }
-		      window.fbAsyncInit = function() {
-			FB.init({
-				appId      : '475565745924741',
-				xfbml      : true,
-				version    : 'v2.3'
-			});
 
-			console.log(FB);
-		};
+	    	window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '475565745924741',
+					xfbml      : true,
+					version    : 'v2.3'
+				});
 
-		(function(d, s, id){
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) {return;}
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk.js";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+				console.log(FB);
+			};
 
-		window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 		
 			},
 
