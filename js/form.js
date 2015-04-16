@@ -365,7 +365,7 @@ $(document).ready(function(){
 		        				message: 'test',
 		        				caption: caption,
 		        				description: this.copy.substring(0,100),
-		        				link: 'https://apps.facebook.com/475565745924741/?title='+ encodeURIComponent(caption) +'&desc='+ encodeURIComponent(desc),
+		        				link: 'https://apps.facebook.com/475565745924741/',
 		        				picture: 'https://damp-shelf-3607.herokuapp.com/img/logo.jpg',
 		        				user_message_prompt: 'share lal'
 		        			},
