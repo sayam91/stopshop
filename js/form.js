@@ -354,7 +354,7 @@ $(document).ready(function(){
 	        			class: "shareFb bloc--rotateRight",
 	        			text: "share",
 	        			click: $.proxy(function(e){
-	        				var link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...'),
+	        				var link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...');
 	        				e.preventDefault;
 	        				
 	        				FB.ui({
