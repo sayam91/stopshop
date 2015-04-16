@@ -361,7 +361,7 @@ $(document).ready(function(){
 								method: 'share_open_graph',
 								action_type: 'og.shares',
 								action_properties: JSON.stringify({
-								object: this.href
+									object: this.href
 								})
 							}, function(response){});
 	        			}
@@ -379,24 +379,7 @@ $(document).ready(function(){
 		        self.RArray.push(results);
 		    }
 
-	    	window.fbAsyncInit = function() {
-				FB.init({
-					appId      : '475565745924741',
-					xfbml      : true,
-					version    : 'v2.3'
-				});
-
-				console.log(FB);
-			};
-
-			(function(d, s, id){
-				var js, fjs = d.getElementsByTagName(s)[0];
-				if (d.getElementById(id)) {return;}
-				js = d.createElement(s); js.id = id;
-				js.src = "//connect.facebook.net/en_US/sdk.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		
+	    
 			},
 
 		clickHandler: function(e) {
