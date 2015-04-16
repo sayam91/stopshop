@@ -29,6 +29,8 @@
 				xfbml      : true,
 				version    : 'v2.3'
 			});
+
+			console.log(FB);
 		};
 
 		(function(d, s, id){
