@@ -170,6 +170,8 @@ results CSS
 	background: -o-linear-gradient(top, $lightBlue 0%,$blue 100%); /* Opera 11.10+ */
 	background: -ms-linear-gradient(top, $lightBlue 0%,$blue 100%); /* IE10+ */
 	color: white;
+	cursor: pointer;
+	text-shadow: 1px 1px 0 rgba(black, .5);
 	text-transform: uppercase;
 
 	&:hover {

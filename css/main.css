@@ -256,9 +256,11 @@ results CSS
   background: -ms-linear-gradient(top, #5773b7 0%, #3b599e 100%);
   /* IE10+ */
   color: white;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
-/* line 175, ../sass/main.scss */
+/* line 177, ../sass/main.scss */
 .shareFb:hover {
   background: #5773b7;
   /* Old browsers */
@@ -273,7 +275,7 @@ results CSS
   background: -ms-linear-gradient(top, #3b599e 0%, #5773b7 100%);
   /* IE10+ */
 }
-/* line 184, ../sass/main.scss */
+/* line 186, ../sass/main.scss */
 .shareFb:before {
   content: '';
   position: absolute;
@@ -286,7 +288,7 @@ results CSS
   height: 100%;
 }
 
-/* line 197, ../sass/main.scss */
+/* line 199, ../sass/main.scss */
 .footer {
   position: absolute;
   left: 0;
@@ -296,7 +298,7 @@ results CSS
   padding: 0 90px;
   z-index: 10;
 }
-/* line 207, ../sass/main.scss */
+/* line 209, ../sass/main.scss */
 .footer__logo {
   display: inline-block;
   width: 150px;
@@ -305,7 +307,7 @@ results CSS
   background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
 }
-/* line 217, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 .footer__text {
   display: inline-block;
   vertical-align: middle;
@@ -313,7 +315,7 @@ results CSS
   font-size: 30px;
   color: white;
 }
-/* line 226, ../sass/main.scss */
+/* line 228, ../sass/main.scss */
 .footer__stripe {
   position: absolute;
   height: 60px;
@@ -326,7 +328,7 @@ results CSS
   background: black;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .bloc {
   position: relative;
   width: 500px;
@@ -337,7 +339,7 @@ results CSS
   font-size: 22px;
   line-height: 1.2;
 }
-/* line 252, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .bloc.bloc--count:after {
   counter-increment: after;
   content: counter(after);
@@ -350,12 +352,12 @@ results CSS
   font-size: 80px;
 }
 
-/* line 266, ../sass/main.scss */
+/* line 268, ../sass/main.scss */
 .bloc--rotateLeft {
   transform: rotate(-3.5deg);
 }
 
-/* line 270, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 .bloc--rotateRight {
   transform: rotate(3.5deg);
 }
