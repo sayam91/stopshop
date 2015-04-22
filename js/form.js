@@ -358,21 +358,27 @@ $(document).ready(function(){
 	        					link = 'http://damp-shelf-3607.herokuapp.com?title='+ encodeURIComponent(this.header) +'&desc='+ encodeURIComponent(this.copy.substring(0,100)+'...');
 	        				e.preventDefault;
 
+							// FB.ui({
+							// 	method: 'share_open_graph',
+							// 	picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
+							// 	action_type: 'og.shares',
+							// 	action_properties: JSON.stringify({
+							// 		object : 'https://apps.facebook.com/475565745924741/?title='+encodeURIComponent(self.header)+'&desc='+encodeURIComponent(self.copy.substring(0,100)+'...'),
+							// 		// url: 'http://damp-shelf-3607.herokuapp.com/?title=2&desc=3',
+							// 	})
+							// }, function(response){});
+
 							FB.ui({
-								method: 'share_open_graph',
-								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg',
-								action_type: 'og.shares',
-								action_properties: JSON.stringify({
-									object : 'https://apps.facebook.com/475565745924741/?title='+encodeURIComponent(self.header)+'&desc='+encodeURIComponent(self.copy.substring(0,100)+'...'),
-									// url: 'http://damp-shelf-3607.herokuapp.com/?title=2&desc=3',
-								})
-							}, function(response){});
+								method: 'feed',
+								name: self.header, // name of the product or content you want to share
+								link: location.origin, // link back to the product or content you are sharing
+								picture: 'http://damp-shelf-3607.herokuapp.com/img/logo.jpg', // path to an image you would like to share with this content
+								caption: 'Quiz stopshop', // caption
+								description: encodeURIComponent(self.copy.subsring(0,100)) // description of your product or content
+							},
+							function(response) {});
+
 	        			}, resultsArray[C])
-					}),
-					shareTwitter = $('<a/>', {
-						class: 'twitter-share-button',
-						text: "Tweet",
-						href: "https://twitter.com/intent/tweet?text="
 					});
 
 				resultsBody.append(resultsBodyInnner).append(shareFb);
